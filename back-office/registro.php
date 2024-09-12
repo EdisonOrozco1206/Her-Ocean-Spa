@@ -53,7 +53,7 @@ if (isset($_POST['registro'])) {
             <br>
             <div>
                 <input type="submit" name="registro" value="Registrarse">
-                <a class="btn" href="./index.html">Inicie sesión</a>
+                <a class="btn" href="<?= SCRIPT_ROOT ?>back-office/index.php">Inicie sesión</a>
             </div>
         <?php
         } else {
