@@ -6,12 +6,11 @@ if (isset($_POST['registro'])) {
 
     if (isset($_POST['password']) && isset($_POST['cpassword'])) {
         if ($_POST['password'] == $_POST['cpassword']) {
-            $con = mysqli_connect("localhost", "root", "", "her_ocean_spa");
-            mysqli_select_db($con, "her_ocean_spa");
+            include('../database/bd.php');
 
             $query = mysqli_query(
-                $con,
-                "INSERT INTO usuarios (id,nombre,apellido,correo,clave,perfil) VALUES (0,'" . $_POST['name'] . "','" . $_POST['lastname'] . "','" . $_POST['email'] . "','" . $_POST['password'] . "',1)"
+                $connect,
+                "INSERT INTO usuarios (id,nombre,apellido,correo,clave,f_nacimiento,perfil) VALUES (0,'" . $_POST['name'] . "','" . $_POST['lastname'] . "','" . $_POST['email'] . "','" . $_POST['password'] . "','" . $_POST['date'] . "',1)"
             );
 
             if ($query) {
@@ -45,6 +44,9 @@ if (isset($_POST['registro'])) {
             <label for="email">Correo electrónico:</label>
             <input type="email" name="email" id="email" required>
             <br>
+            <label for="date">fecha de nacimiento:</label>
+            <input type="date" name="date" id="date" required>
+            <br>
             <label for="password">Contraseña:</label>
             <input type="password" name="password" id="password" minlength="5" required>
             <br>
@@ -53,7 +55,7 @@ if (isset($_POST['registro'])) {
             <br>
             <div>
                 <input type="submit" name="registro" value="Registrarse">
-                <a class="btn" href="<?= SCRIPT_ROOT ?>back-office/index.php">Inicie sesión</a>
+                <a class="btn" href="<?= SCRIPT_ROOT ?>back-office/login.php">Inicie sesión</a>
             </div>
         <?php
         } else {

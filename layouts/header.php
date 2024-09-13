@@ -31,7 +31,7 @@ define('SCRIPT_ROOT', '//localhost/her-ocean-spa/');
             </div>
             <div>
                 <img src="<?= SCRIPT_ROOT ?>img/suit-heart.svg" alt=" ">
-                <a href="<?= SCRIPT_ROOT ?>back-office/"><img src="<?= SCRIPT_ROOT ?>img/person.svg" alt=" "></a>
+                <a href="<?= SCRIPT_ROOT ?>back-office/login.php"><img src="<?= SCRIPT_ROOT ?>img/person.svg" alt=" "></a>
                 <img src="<?= SCRIPT_ROOT ?>img/search.svg" alt=" ">
                 <img src="<?= SCRIPT_ROOT ?>img/handbag.svg" alt=" ">
             </div>
