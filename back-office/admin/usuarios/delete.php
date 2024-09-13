@@ -14,7 +14,7 @@ if (isset($_GET['id'])) {
     if (!isset($data[0])) {
         echo "
         <script>
-        alert('registro no encontrado');
+        confirm('registro no encontrado');
         window.location.href = '" . SCRIPT_ROOT . "back-office//admin/usuarios/lista.php';
         </script>
         ";
@@ -25,17 +25,25 @@ if (isset($_GET['id'])) {
 
             echo "
             <script>
-            alert('borrado exitoso');
+            confirm('borrado exitoso');
             window.location.href = '" . SCRIPT_ROOT . "back-office//admin/usuarios/lista.php';
             </script>
             ";
         } else {
             echo "
             <script>
-            alert('ha ocurrido un error');
+            confirm('ha ocurrido un error');
             </script>";
         }
     }
+}else{
+    echo "
+    <script>
+    confirm('registro no encontrado');
+    window.location.href = '" . SCRIPT_ROOT . "back-office//admin/usuarios/lista.php';
+    </script>
+    ";
 }
+?>
 
-// echo $_POST['email']." ".$_POST['password'];
+<link rel="stylesheet" href="<?= SCRIPT_ROOT ?>back-office/styles-bo.css">

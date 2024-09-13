@@ -1,5 +1,4 @@
 <?php
-define('SCRIPT_ROOT', '//localhost/her-ocean-spa/');
 include($_SERVER["DOCUMENT_ROOT"] . '/her-ocean-spa/database/bd.php');
 
 $datos_formulario = array();
@@ -37,19 +36,22 @@ if (isset($_POST['Guardar'])) {
 
         echo "
         <script>
-        alert('registro exitoso');
+        confirm('registro exitoso');
         window.location.href = '" . SCRIPT_ROOT . "back-office//admin/usuarios/lista.php';
         </script>
         ";
     } else {
         echo "
         <script>
-        alert('ha ocurrido un error');
+        confirm('ha ocurrido un error');
         </script>";
     }
 }
 
 ?>
+
+<?php include($_SERVER["DOCUMENT_ROOT"].'/her-ocean-spa/layouts/header.php') ?>
+
 <link rel="stylesheet" href="<?= SCRIPT_ROOT ?>back-office/styles-bo.css">
 <div class="container_bo">
     <form action="" method="post">
@@ -74,7 +76,7 @@ if (isset($_POST['Guardar'])) {
             <select name="profile" id="profile">
                 <option value="" disabled
                     <?= !$datos_formulario  ? 'selected' : ''  ?>>
-                    seleccione una opcion
+                    Seleccione una opción
                 </option>
                 <option value="0" <?= $datos_formulario && $datos_formulario['perfil'] && ($datos_formulario['perfil'] == "0") ? 'selected' : ''  ?>>
                     Administrador
@@ -93,3 +95,4 @@ if (isset($_POST['Guardar'])) {
      
     </form>
 </div>
+<?php include($_SERVER["DOCUMENT_ROOT"].'/her-ocean-spa/layouts/footer.php') ?>
