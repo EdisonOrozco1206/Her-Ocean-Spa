@@ -62,7 +62,7 @@ if (isset($_POST['registro'])) {
         ?>
             <?= $mensajeRegistro ?>
             <br>
-            <a class="btn" href="<?= SCRIPT_ROOT ?>back-office/registro.php">Reintentar</a>
+            <a class="btn" href="<?= SCRIPT_ROOT ?>back-office/registro.php">Volver</a>
         <?php
         }
         ?>

@@ -1,4 +1,5 @@
 <?php
+$mensaje_error = "";
 if (isset($_POST) && !empty($_POST)) {
 
     include('../database/bd.php');
@@ -17,7 +18,7 @@ if (isset($_POST) && !empty($_POST)) {
             header("location: ../back-office/client/index.php");
         }
     } else {
-        echo "<h1>USUARIO Y CLAVE INCORRECTOS</h1>";
+        $mensaje_error = "<span style='color:red;'>USUARIO Y CLAVE INCORRECTOS</span>";
     }
 }
 
@@ -35,6 +36,7 @@ if (isset($_POST) && !empty($_POST)) {
         <label for="password">Contraseña:</label>
         <input type="password" name="password" id="password" required>
         <br>
+        <?= $mensaje_error?>
         <div>
             <input type="submit" value="Iniciar sesión">
             <a class="btn" href="./registro.php">Registrese</a>
