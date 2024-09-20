@@ -1,5 +1,7 @@
 <?php
-define('SCRIPT_ROOT', '//localhost/her-ocean-spa/');
+if (!defined("SCRIPT_ROOT")) {
+    define('SCRIPT_ROOT', '//localhost/her-ocean-spa/');
+}
 ?>
 
 <!DOCTYPE html>
