@@ -2,7 +2,7 @@
 
 <div class="index-container">
     <div class="banner-index-container">
-        <img src="<?=SCRIPT_ROOT?>img/perfilhome.png" class="banner-index" alt="Imagen">
+        <img src="img/perfilhome.png" class="banner-index" alt="Imagen">
     </div>
     <div class="row_1">
         <h2>DESCONECTAR PARA CONECTAR</h2>
