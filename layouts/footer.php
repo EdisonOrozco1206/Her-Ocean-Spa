@@ -1,5 +1,5 @@
 
-<footer>
+<footer id="footer">
         <div class="contacto">
             <form action="#">
                 <h3>Inscribete para estar al tanto de novedades: </h3>

@@ -1,0 +1,164 @@
+header{
+    position: fixed;
+    width: 100vw;
+    top: 0;
+}
+.index-container{
+    .bg{
+        transform: rotate(90deg) translateX(-50vh) translateY(-21vw);
+        height: 100vw;
+        position: fixed;
+        z-index: -1;
+        top: 0;
+    }
+}
+.row_0{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: -1;
+
+    div{
+        padding-left: 5%;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+
+        h1{
+            transform: translateY(45vh);
+            color: white;
+            font-size: 50px;
+        }
+        p{
+            transform: translateY(45vh);
+            color: white;
+        }
+    }
+}
+.addbgwhite{
+    background-color: white;
+}
+.blackText{
+    color: black !important;
+}
+/* header:hover .nav-action{
+    display: block;
+} */
+.dblock{
+    display: block !important;
+}
+.dnone{
+    display: none;
+}
+.bgtrp{
+    background-color: transparent;
+}
+.textwhite{
+    color: white !important;
+}
+.destellos{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+.destellos:first-child{
+    bottom: 0;
+    left: 0;
+}
+.destellos:last-child{
+    top: 0;
+    right: 0;
+}
+.li-destellos{
+    position: relative;
+    height: 20px;
+
+    &:hover .destellos{
+        display: none;
+    }
+}
+header:hover .destellos{
+    display: block;
+}
+.search-div{
+    input{
+        padding: 5px;
+        font-size: 17px;
+        border: none;
+        border-bottom: 1px solid gray;
+    }
+}
+.swal2-confirm{
+    background-color: #fdeaf2;
+    border: 1px solid pink;
+}
+.sedes-container{
+    transform: translateY(30vh);
+
+    h1{
+        font-size: 50px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}
+.sedes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 20px;
+
+    .sede{
+        width: 28%;
+        background-color: white;
+        padding: 10px;
+
+        h2{
+            font-size: 30px;
+            text-align: center;
+            border-bottom: 1px solid gray;
+            margin-bottom: 10px;
+        }
+        p{
+            padding: 5px;
+        }
+        ul{
+            margin-left: 20px;
+        }
+    }
+}
+.reservas-container{
+    transform: translateY(30vh);
+    .page-description{
+        text-align: center;
+    }
+    h1{
+        font-size: 50px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}
+.reservas-table{
+    background-color: white;
+    width: 80vw;
+    margin: 0 auto;
+
+    td, th{
+        text-align: center;
+        border-bottom: 1px solid black;
+        border-top: 1px solid black;
+        padding: 10px;
+    }
+}
+.opiniones-container{
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+    div{
+        overflow: hidden;
+    }
+}

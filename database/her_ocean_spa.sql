@@ -50,7 +50,6 @@ CREATE TABLE `opiniones` (
   `comentarion` text NOT NULL,
   `calificacion` int(1) DEFAULT NULL,
   `id_cliente` int(11) NOT NULL,
-  `id_servicio` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -63,9 +62,9 @@ CREATE TABLE `reservas` (
   `id` int(11) NOT NULL,
   `fecha_hora` datetime NOT NULL,
   `precio_total` float NOT NULL,
-  `estado` varchar(255) NOT NULL,
-  `cantidad_servicios` text NOT NULL,
   `m_pago` varchar(255) DEFAULT NULL,
+  `estado` varchar(255) NOT NULL,
+  `sede` varchar(50) NOT NULL,
   `id_cliente` int(11) NOT NULL,
   `id_servicio` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -100,8 +99,7 @@ ALTER TABLE `usuarios`
 --
 ALTER TABLE `opiniones`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `id_cliente` (`id_cliente`),
-  ADD KEY `id_servicio` (`id_servicio`);
+  ADD KEY `id_cliente` (`id_cliente`);
 
 --
 -- Indices de la tabla `reservas`

@@ -9,9 +9,8 @@
         $id = isset($_POST['id']) && !empty($_POST['id']) ? $_POST['id'] : '';
 
         // imagen upload
-
         // Verificar si el directorio existe, si no, crearlo
-        $uploadDirectory = 'uploads/';
+        $uploadDirectory = 'back/uploads/';
         if (!is_dir($uploadDirectory)) {
             mkdir($uploadDirectory, 0755, true);
         }
@@ -45,16 +44,15 @@
         }
 
         if($nombre != '' && $precio != '' && $descripcion != '' && $id != ''){
-            $sql = "UPDATE servicios SET nombre='$nombre', descripcion='$descripcion', precio= $precio, imagen='$newFileName' WHERE id = $id);"; 
+            $sql = "UPDATE servicios SET nombre='$nombre', descripcion='$descripcion', precio= $precio, imagen='$newFileName' WHERE id = $id"; 
 
             if(mysqli_query($connect, $sql)){
-                
                 if($newFileName){
-                    $sql = "UPDATE servicios SET imagen='$newFileName' WHERE id = $id);"; 
+                    $sql = "UPDATE servicios SET imagen='$newFileName' WHERE id = $id"; 
                     mysqli_query($connect, $sql);
                 }
 
-                header("Location: ../servicios.php");
+                header("Location: servicios.php");
             }
         }else{
             echo "Datos incompletos";
@@ -72,7 +70,7 @@
 
 <link rel="stylesheet" href="css/style.css">
 
-<div class="servicios-container">
+<div class="servicios-container agregar-servicio">
     <h1>Actualizar Servicio</h1>
 
     <form action="" method="post" enctype="multipart/form-data">
