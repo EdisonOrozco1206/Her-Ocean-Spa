@@ -54,14 +54,14 @@ if (isset($_POST['registro'])) {
         <br>
         <div>
             <input type="submit" name="registro" value="Registrarse">
-            <a class="btn" href="<?= SCRIPT_ROOT ?>bac-office/registr.php">Inicie sesión</a>
+            <a class="btn" href="<?= SCRIPT_ROOT ?>back-office/registro.php">Inicie sesión</a>
         </div>
         <?php
         } else {
         ?>
         <?= $mensajeRegistro ?>
         <br>
-        <a class="btn" href="<?= SCRIPT_ROOT ?>bac-office/registro.php">reintentar</a>
+        <a class="btn" href="<?= SCRIPT_ROOT ?>back-office/registro.php">reintentar</a>
         <?php
         }
         ?>

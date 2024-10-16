@@ -2,22 +2,30 @@
 
 <link rel="stylesheet" href="../css/style.css">
 
-<div class="servicios-container">
+<div class="servicios-container agregar-servicio">
     <h1>Agregar Servicio</h1>
     <form action="guardarServicio.php" method="post" enctype="multipart/form-data">
-        <label for="nombre">Nombre</label>
-        <input type="text" name="nombre">
+        <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" required>
+        </div>
 
-        <label for="descripcion">descripcion</label>
-        <input type="text" name="descripcion">
+        <div>
+            <label for="descripcion">Descripcion</label>
+            <input type="text" name="descripcion" required>
+        </div>
 
-        <label for="precio">precio</label>
-        <input type="number" name="precio">
+        <div>
+            <label for="precio">Precio</label>
+            <input type="number" name="precio" required>
+        </div>
 
-        <label for="imagen">imagen</label>
-        <input type="file" name="imagen">
+        <div>
+            <label for="imagen">Imagen</label>
+            <input type="file" name="imagen" required>
+        </div>
         
-        <input type="submit" value="enviar">
+        <input type="submit" value="Enviar">
     </form>
 </div>
 

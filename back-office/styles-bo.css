@@ -1,5 +1,4 @@
 .container_bo {
-
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -15,15 +14,18 @@
     }
 
     form {
+        transform: translateY(30vh);
         display: inline-flex;
         flex-direction: column;
         align-items: center;
-        background-color: #fff;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         border-radius: 5px;
         width: 70%;
         max-width: 400px;
         padding: 30px;
+    }
+
+    .buttons-container{
+        width: 100%;
     }
 
     label {
@@ -39,33 +41,46 @@
         border-radius: 5px 5px;
         padding: 15px 10px;
         border: none;
-        background-color: #ffd8fc;
+        background-color: #ffffff;
     }
 
     input[type="submit"] {
-        width: auto;
-        display: inline-block;
-        background-color: #f0a1e9;
-        border: 1px solid #333;
+        display: block;
+        width: 100%;
+        background-color: #fdeaf2;
         cursor: pointer;
-        font-size: 20px;
-        color: #FFF;
-        font-weight: bold;
-        border: none;
-        margin: 15px 5px;
+        font-size: 17px;
+        padding: 10px 50px;
+        color: gray;
+        font-weight: lighter;
+        margin: 5px 0px;
+        border-radius: 0px;   
+        border: 1px solid black;
+        transition: all 500ms;
+
+        &:hover{
+            background-color: black;
+            color: white;
+        }
     }
 
     .btn {
-        display: inline-block;
-        border: 2px solid #f0a1e9;
+        display: block;
         cursor: pointer;
-        font-size: 20px;
-        color: #f0a1e9;
-        font-weight: bold;
-        text-decoration: none;
-        border-radius: 5px;
-        margin: 15px 5px;
-        padding: 15px 10px;
         text-align: center;
+        margin: 20px;
+        color: gray;
+        text-decoration: none;
+        border: 1px solid black;
+        padding: 10px 50px;
+        font-size: 17px;
+        width: 75%;
+        transform: translateX(-20px);
+        transition: all 500ms;
+
+        &:hover{
+            background-color: #393939;
+            color: white;
+        }
     }
 }
