@@ -19,11 +19,6 @@
             <label for="precio">Precio</label>
             <input type="number" name="precio" required>
         </div>
-
-        <div>
-            <label for="imagen">Imagen</label>
-            <input type="file" name="imagen" required>
-        </div>
         
         <input type="submit" value="Enviar">
     </form>

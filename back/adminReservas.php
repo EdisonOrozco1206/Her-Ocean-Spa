@@ -60,7 +60,8 @@
         </table>
     <?php else: ?>
         <tr>
-            <p>No se han encontrado reservas</p>
+            <p style="text-align: center; font-weight: bolder; margin-bottom: 10px;">No se han encontrado reservas</p>
+            <hr>
         </tr>
     <?php endif;?>
 
