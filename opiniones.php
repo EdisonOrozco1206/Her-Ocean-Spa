@@ -39,18 +39,21 @@
             <input type="submit" value="Postear opinion">
         </form>
     <?php else: ?>
-        <p class="page-description" style="margin-top: 20px;">Te invitamos a <a href="back-office/registro.php">Registrarte</a> o <a href="back-office/">Iniciar sesión</a> para dejar tu valiosa opinion sobre nosotros</p>
+        <p class="page-description" style="margin-top: 20px; margin-bottom: 20px;">Te invitamos a <a href="back-office/registro.php">Registrarte</a> o <a href="back-office/">Iniciar sesión</a> para dejar tu valiosa opinion sobre nosotros</p>
     <?php endif; ?>
 
-    <div class="opiniones-container">
+    <div class="opiniones-container" style="margin-top: 20px;">
         <?php foreach($rows as $r): ?>
             <?php foreach($usuarios as $u): ?>
                 <?php if($u['id'] == $r['id_cliente']): ?>
                     <div>
                         <h2><?= $u['nombre'] ?> <?= $u['apellido'] ?></h2>
-                        <span><?= $u['correo'] ?></span>
-                        <hr>
+                        <span><?= $r['fecha_hora'] ?> - <?= $u['correo'] ?></span>
+                        <hr style="margin: 10px 0px;">
                         <p><?= $r['comentarion'] ?></p>
+                        <?php if(isset($_SESSION['user']) && !empty($_SESSION['user']) && $_SESSION['user']['perfil'] == 2): ?>
+                            <a href="back/borrarReserva.php?id=<?= $r['id'] ?>" class="borrar-servicio-button">Borrar</a>
+                        <?php endif; ?>
                     </div>
                 <?php endif; ?>
             <?php endforeach; ?>

@@ -124,6 +124,9 @@ header div.fila:nth-child(2) div:last-child{
     color: #cbd5e1;
     padding-top: 0.5rem;
 }
+footer .contacto{
+    width: 60% !important;
+}
 
 .footer-container {
     padding-left: 3.5rem;
@@ -325,14 +328,12 @@ footer{
         display:grid;
         gap: 20px;
         max-width: 100%;
+        position: relative;
         grid-template-columns: repeat(3, 1fr);
-        background-color: black;
         width: 90%;
         margin: 0 auto;
 
         .card{
-            background-color: white;
-            border: 1px solid gray;
             overflow: hidden;
 
             .img{
@@ -349,7 +350,7 @@ footer{
                 h2{
                     margin-bottom: 10px;
                     font-size: 25px;
-                    border-bottom: 1px solid black;
+                    border-bottom: 1px solid white;
                 }
                 .info{
                     font-size: 15px;

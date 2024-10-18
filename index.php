@@ -5,8 +5,7 @@
     <div class="row_0">
         <div class="info">
             <h1>Her ocean spa</h1>
-
-            <?php if($_SESSION['user']):?>
+            <?php if($_SESSION['user'] && isset($_SESSION['user']) && !empty($_SESSION['user'])):?>
                 <p>Bienvenido <?= $_SESSION['user']['nombre'] ?> <?= $_SESSION['user']['apellido'] ?>!!!</p>
             <?php endif;?>
         </div>
@@ -74,78 +73,5 @@
         </div>
     </div>
 </div>
-
-<script>
-    window.addEventListener("DOMContentLoaded", () => {
-        const header = document.getElementById("header");
-        const text = document.querySelectorAll(".title");
-        const links = document.querySelectorAll(".header-link");
-        const footer = document.getElementById("footer");
-        const destellos = document.querySelectorAll(".destellos");
-
-        destellos.forEach(element => {
-            element.classList.add("dnone");
-        });
-
-        header.classList.add("bgtrp");
-        text.forEach(element => {
-            element.classList.add("textwhite");
-        });
-        links.forEach(element => {
-            element.classList.add("textwhite");
-        });
-        footer.style.transform = "translateY(0vh)";
-    });
-
-    window.addEventListener("scroll", () => {
-        const header = document.getElementById("header");
-        const text = document.querySelectorAll(".title");
-        const links = document.querySelectorAll(".header-link");
-        const navActions = document.querySelectorAll(".nav-action");
-        const destellos = document.querySelectorAll(".destellos");
-
-        if(window.scrollY >= 544){
-            header.classList.remove("bgtrp");
-            header.classList.add("addbgwhite");
-            text.forEach(element => {
-                element.classList.remove("textwhite");
-                element.classList.add("blackText");
-            });
-            links.forEach(element => {
-                element.classList.remove("textwhite");
-                element.classList.add("blackText");
-            });
-            destellos.forEach(element => {
-                element.classList.remove("dnone");
-            });
-
-            if(header.classList.contains("addbgwhite")){
-                navActions.forEach(element => {
-                    element.classList.remove("dnone");
-                    element.classList.add("dblock");
-                });
-            }
-        }
-        if(window.scrollY < 544){
-            header.classList.remove("addbgwhite");
-            header.classList.add("bgtrp");
-            text.forEach(element => {
-                element.classList.add("textwhite");
-                element.classList.remove("blackText");
-            });
-            links.forEach(element => {
-                element.classList.add("textwhite");
-                element.classList.remove("blackText");
-            });
-            navActions.forEach(element => {
-                element.classList.add("dnone");
-                element.classList.remove("dblock");
-            });
-            destellos.forEach(element => {
-                element.classList.add("dnone");
-            });
-        }   
-    });
-</script>
 
 <?php include('layouts/footer.php') ?>             

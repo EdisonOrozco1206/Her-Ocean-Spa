@@ -8,7 +8,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" type="image/x-icon" href="<?= SCRIPT_ROOT ?>img/logo-hos.jpg">
+    <link rel="icon" type="image/x-icon" href="<?= SCRIPT_ROOT ?>img/favicon.png">
     <link rel="stylesheet" href="<?= SCRIPT_ROOT ?>css/style.css">
     <link rel="stylesheet" href="<?= SCRIPT_ROOT ?>css/new_styles.css">
     <title>Her Ocean Spa</title>
@@ -46,7 +46,7 @@ session_start();
                     </li>
                     <li><a class="header-link" href="<?=SCRIPT_ROOT ?>reservas.php">Reservas</a></li>
                     <li><a class="header-link" href="<?=SCRIPT_ROOT ?>opiniones.php">Opiniones</a></li>
-                    <li><a class="header-link" href="<?=SCRIPT_ROOT ?>belleza.php">Belleza</a></li>
+                    <li><a class="header-link" href="<?=SCRIPT_ROOT ?>belleza.php">Recomendaciones</a></li>
                     <li><a class="header-link" href="<?=SCRIPT_ROOT ?>sedes.php">Sedes</a></li>
                 </ul>
             </nav>
@@ -100,6 +100,97 @@ session_start();
             navActions.forEach(element => {
                 element.classList.remove("dnone");
                 element.classList.add("dblock");
+            });
+        }
+        if(window.location.href == "http://localhost/Proyecto/index.php" || window.location.href == "http://localhost/Proyecto/"){
+            
+            window.addEventListener("DOMContentLoaded", () => {
+                const header = document.getElementById("header");
+                const text = document.querySelectorAll(".title");
+                const links = document.querySelectorAll(".header-link");
+                const footer = document.getElementById("footer");
+                const destellos = document.querySelectorAll(".destellos");
+                const navActions = document.querySelectorAll(".nav-action");
+                header.addEventListener('mouseover', function() {
+                    navActions.forEach(element => {
+                        element.classList.remove("dnone");
+                        element.classList.add("dblock");
+                    });
+                });
+                header.addEventListener('mouseout', function() {
+                    navActions.forEach(element => {
+                        element.classList.add("dnone");
+                        element.classList.remove("dblock");
+                    });
+                });
+
+
+                destellos.forEach(element => {
+                    element.classList.add("dnone");
+                });
+
+                header.classList.add("bgtrp");
+                text.forEach(element => {
+                    element.classList.add("textwhite");
+                });
+                links.forEach(element => {
+                    element.classList.add("textwhite");
+                });
+                navActions.forEach(element => {
+                        element.classList.add("dnone");
+                        element.classList.remove("dblock");
+                    });
+                footer.style.transform = "translateY(0vh)";
+            });
+
+            window.addEventListener("scroll", () => {
+                const header = document.getElementById("header");
+                const text = document.querySelectorAll(".title");
+                const links = document.querySelectorAll(".header-link");
+                const navActions = document.querySelectorAll(".nav-action");
+                const destellos = document.querySelectorAll(".destellos");
+
+                if(window.scrollY >= 544){
+                    header.classList.remove("bgtrp");
+                    header.classList.add("addbgwhite");
+                    text.forEach(element => {
+                        element.classList.remove("textwhite");
+                        element.classList.add("blackText");
+                    });
+                    links.forEach(element => {
+                        element.classList.remove("textwhite");
+                        element.classList.add("blackText");
+                    });
+                    destellos.forEach(element => {
+                        element.classList.remove("dnone");
+                    });
+
+                    if(header.classList.contains("addbgwhite")){
+                        navActions.forEach(element => {
+                            element.classList.remove("dnone");
+                            element.classList.add("dblock");
+                        });
+                    }
+                }
+                if(window.scrollY < 544){
+                    header.classList.remove("addbgwhite");
+                    header.classList.add("bgtrp");
+                    text.forEach(element => {
+                        element.classList.add("textwhite");
+                        element.classList.remove("blackText");
+                    });
+                    links.forEach(element => {
+                        element.classList.add("textwhite");
+                        element.classList.remove("blackText");
+                    });
+                    navActions.forEach(element => {
+                        element.classList.add("dnone");
+                        element.classList.remove("dblock");
+                    });
+                    destellos.forEach(element => {
+                        element.classList.add("dnone");
+                    });
+                }   
             });
         }
     </script>

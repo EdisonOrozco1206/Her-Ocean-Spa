@@ -154,11 +154,83 @@ header:hover .destellos{
     }
 }
 .opiniones-container{
-    border: 1px solid red;
+    padding: 10px;
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
     display: grid;
     grid-template-columns: auto auto auto;
+    gap: 10px;
 
     div{
-        overflow: hidden;
+        padding: 10px;
+        box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.75);
+        
+        h2{
+            text-transform: uppercase;
+        }
+        .borrar-servicio-button{
+            display: block;
+            text-align: center;
+            padding: 5px;
+            text-decoration: none;
+            color: white;
+            background-color: black;
+            margin-top: 10px;
+            border: 1px solid black;
+            transition: all 500ms;
+
+            &:hover{
+                background-color: white;
+                color: black;
+            }
+        }
+    }
+}
+footer{
+    padding-top: 40px;
+}
+.serviciosss-container{
+
+    .servicios-box{
+        width: 95%;
+        margin: 0 auto;
+        padding: 20px 10px;
+        display: flex;
+        align-items: center;
+        min-height: 300px;
+
+        h1{
+            width: 30%;
+            transform: rotate(-90deg);
+            font-size: 80px !important;
+        }
+        h2{
+            font-size: 30px !important;
+            text-transform: uppercase;
+            color: white;
+        }
+        .servicios{
+            overflow: hidden;
+            min-height: 100%;
+            border-radius: 10px;
+            margin-right: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+
+            .price{
+                color: white !important; 
+            }
+
+            img{
+                position: absolute;
+                z-index: -2;
+                opacity: 0.5;
+                width: 100%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
     }
 }
