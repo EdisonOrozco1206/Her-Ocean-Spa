@@ -3,11 +3,13 @@
 <div class="container_bo">
     <form action="./login.php" method="post">
         <h1>Inicia sesión</h1>
-        <input type="email" name="email" id="email" required placeholder="Correo"> 
+        <label for="email">Correo electrónico:</label>
+        <input type="email" name="email" id="email" autocomplete="off" required>
         <br>
-        <input type="password" name="password" id="password" required placeholder="Contraseña">
+        <label for="password">Contraseña:</label>
+        <input type="password" name="password" id="password" required>
         <br>
-        <div class="buttons-container">
+        <div>
             <input type="submit" value="Iniciar sesión">
             <a class="btn" href="./registro.php">Registrese</a>
         </div>
