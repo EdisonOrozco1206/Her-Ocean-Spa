@@ -14,7 +14,7 @@
 ?>
 
 <div class="serviciosss-container servicios-container">
-    <?php if($_SESSION['user'] && isset($_SESSION['user']['perfil']) && $_SESSION['user']['perfil'] == 2): ?>
+    <?php if(isset($_SESSION['user']) && isset($_SESSION['user']['perfil']) && $_SESSION['user']['perfil'] == 2): ?>
         <a href="back/agregarServicio.php" class="agregar-servicio-button">Agregar servicio</a>
     <?php endif; ?>
 
@@ -34,7 +34,7 @@
                             <p class="info"><?= $service['descripcion'] ?></p>
                             <p class="price">$<?= number_format($service['precio'], 0, ',', '.') ?></p>
                             
-                            <?php if($_SESSION['user'] && isset($_SESSION['user']['perfil']) && $_SESSION['user']['perfil'] == 2): ?>
+                            <?php if(isset($_SESSION['user']) && isset($_SESSION['user']['perfil']) && $_SESSION['user']['perfil'] == 2): ?>
                                 <div class="service-options" style="margin-top: 10px;">
                                     <a href="actualizarServicio.php?id=<?= $service['id'] ?>">
                                         Editar

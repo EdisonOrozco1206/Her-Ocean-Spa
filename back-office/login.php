@@ -12,7 +12,7 @@ if (isset($_POST) && !empty($_POST)) {
     }
 
     if ($data) {
-        if ($data[0]['perfil'] == "0") {
+        if ($data[0]['perfil'] == "2") {
             header("location: ../back-office/admin/index.php");
         } else {
             header("location: ../back-office/client/index.php");

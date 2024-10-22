@@ -1,5 +1,5 @@
 <?php
-include($_SERVER["DOCUMENT_ROOT"] . '/her-ocean-spa/database/bd.php');
+include($_SERVER["DOCUMENT_ROOT"] . '/Proyecto/database/bd.php');
 
 $datos_formulario = array();
 
@@ -48,7 +48,7 @@ if (isset($_POST['Guardar'])) {
 
 ?>
 
-<?php include($_SERVER["DOCUMENT_ROOT"] . '/her-ocean-spa/layouts/header.php') ?>
+<?php include($_SERVER["DOCUMENT_ROOT"] . '/Proyecto/layouts/header.php') ?>
 
 <link rel="stylesheet" href="<?= SCRIPT_ROOT ?>back-office/styles-bo.css">
 <div class="container_bo">
@@ -93,4 +93,4 @@ if (isset($_POST['Guardar'])) {
 
     </form>
 </div>
-<?php include($_SERVER["DOCUMENT_ROOT"] . '/her-ocean-spa/layouts/footer.php') ?>
+<?php include($_SERVER["DOCUMENT_ROOT"] . '/Proyecto/layouts/footer.php') ?>
