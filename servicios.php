@@ -2,7 +2,7 @@
 
 <?php
     include("database/bd.php");
-
+    
     if(isset($_GET['search']) && !empty($_GET['search'])){
         $search = $_GET['search'];
         $sql = "SELECT * FROM servicios WHERE nombre LIKE '%$search%' OR descripcion LIKE '%$search%' ORDER BY id DESC";

@@ -1,5 +1,6 @@
 <?php include('layouts/header.php') ?>
 
+<<<<<<< HEAD
 <div class="sedes-container">
     <h1>Sedes</h1>
     <div class="sedes">
@@ -52,6 +53,10 @@
             </ul>
         </div>
     </div>
+=======
+<div class="index-container">
+
+>>>>>>> 449b2bdfa614804492248c883b01fd56a0680292
 </div>
 
 <?php include('layouts/footer.php') ?>
