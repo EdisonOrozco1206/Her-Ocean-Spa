@@ -5,7 +5,7 @@
     <div class="row_0">
         <div class="info">
             <h1>Her ocean spa</h1>
-            <?php if($_SESSION['user'] && isset($_SESSION['user']) && !empty($_SESSION['user'])):?>
+            <?php if(isset($_SESSION['user']) && $_SESSION['user'] && !empty($_SESSION['user'])):?>
                 <p>Bienvenido <?= $_SESSION['user']['nombre'] ?> <?= $_SESSION['user']['apellido'] ?>!!!</p>
             <?php endif;?>
         </div>

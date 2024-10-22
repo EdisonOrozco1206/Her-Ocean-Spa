@@ -74,6 +74,4 @@
         <?php endforeach; ?>
     </div>
 
-</div>
-
 <?php include('layouts/footer.php') ?>

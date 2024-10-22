@@ -27,7 +27,7 @@
 ?>
 
 <?php 
-    if($_SESSION['user']  && isset($_SESSION['user']['perfil']) && $_SESSION['user']['perfil'] == 2){
+    if(isset($_SESSION['user']['perfil']) && $_SESSION['user']   && $_SESSION['user']['perfil'] == 2){
         include('back/adminReservas.php');
     }
 ?>

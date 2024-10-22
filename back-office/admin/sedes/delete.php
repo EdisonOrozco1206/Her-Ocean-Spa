@@ -1,8 +1,8 @@
 <?php
-define('SCRIPT_ROOT', '//localhost/her-ocean-spa/');
+define('SCRIPT_ROOT', '//localhost/Proyecto/');
 if (isset($_GET['id'])) {
 
-    include($_SERVER["DOCUMENT_ROOT"] . '/her-ocean-spa/database/bd.php');
+    include($_SERVER["DOCUMENT_ROOT"] . '/Proyecto/database/bd.php');
 
     $query = mysqli_query($connect, "SELECT * FROM sedes WHERE id = '" . $_GET['id'] . "';");
 

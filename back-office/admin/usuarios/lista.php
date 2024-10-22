@@ -1,5 +1,5 @@
 <?php
-include($_SERVER["DOCUMENT_ROOT"] . '/her-ocean-spa/database/bd.php');
+include($_SERVER["DOCUMENT_ROOT"] . '/Proyecto/database/bd.php');
 
 $query = mysqli_query($connect, "SELECT * FROM usuarios;");
 
@@ -9,7 +9,7 @@ while ($row = mysqli_fetch_assoc($query)) {
 }
 
 ?>
-<?php include($_SERVER["DOCUMENT_ROOT"] . '/her-ocean-spa/layouts/header.php') ?>
+<?php include($_SERVER["DOCUMENT_ROOT"] . '/Proyecto/layouts/header.php') ?>
 
 <link rel="stylesheet" href="<?= SCRIPT_ROOT ?>back-office/styles-bo.css">
 <div class="container_bo">
@@ -53,4 +53,4 @@ while ($row = mysqli_fetch_assoc($query)) {
     </div>
 </div>
 
-<?php include($_SERVER["DOCUMENT_ROOT"] . '/her-ocean-spa/layouts/footer.php') ?>
+<?php include($_SERVER["DOCUMENT_ROOT"] . '/Proyecto/layouts/footer.php') ?>

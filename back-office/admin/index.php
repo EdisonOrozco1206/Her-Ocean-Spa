@@ -1,4 +1,4 @@
-<?php include($_SERVER["DOCUMENT_ROOT"].'/her-ocean-spa/layouts/header.php') ?>
+<?php include($_SERVER["DOCUMENT_ROOT"].'/Proyecto/layouts/header.php') ?>
 
 <link rel="stylesheet" href="<?= SCRIPT_ROOT ?>back-office/styles-bo.css">
 <div class="container_bo">
@@ -8,4 +8,4 @@
         <a class="btnFill" href="./sedes/lista.php">Gestion de sedes</a>
     </div>
 </div>
-<?php include($_SERVER["DOCUMENT_ROOT"].'/her-ocean-spa/layouts/footer.php') ?>
+<?php include($_SERVER["DOCUMENT_ROOT"].'/Proyecto/layouts/footer.php') ?>

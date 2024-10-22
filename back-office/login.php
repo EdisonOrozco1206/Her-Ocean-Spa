@@ -3,7 +3,7 @@ $mensaje_error = "";
 if (isset($_POST) && !empty($_POST)) {
 
     include('../database/bd.php');
- 
+
     $query = mysqli_query($connect, "SELECT * FROM usuarios where correo = '" . $_POST['email'] . "' and clave = '" . $_POST['password'] . "'");
 
     $data = array();
@@ -13,12 +13,12 @@ if (isset($_POST) && !empty($_POST)) {
 
     if ($data) {
         session_start();
-        $_SESSION['user'] = $data;
-        session_abort();
-        if ($data[0]['perfil'] == "0") {
-            header("location: admin/index.php");
+        if ($data[0]['perfil'] == "2") {
+            $_SESSION['user'] = $data[0];
+            header("location: ../back-office/admin/index.php");
         } else {
-            header("location: client/index.php");
+            $_SESSION['user'] = $data[0];
+            header("location: ../back-office/client/index.php");
         }
     } else {
         $mensaje_error = "<span style='color:red;'>USUARIO Y CLAVE INCORRECTOS</span>";
