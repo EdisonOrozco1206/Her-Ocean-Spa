@@ -35,23 +35,23 @@ if (isset($_POST['registro'])) {
         if ($mensajeRegistro == "") {
         ?>
             <h1>Regístrese</h1>
-            <label for="name">Nombre:</label>
-            <input type="text" name="name" id="name" maxlength="30" pattern="^[a-zA-Z]*" required>
+            <!-- <label for="name">Nombre:</label> -->
+            <input type="text" name="name" id="name" maxlength="30" pattern="^[a-zA-Z]*" required placeholder="Nombre:">
             <br>
-            <label for="lastname">Apellido:</label>
-            <input type="text" name="lastname" id="lastname" pattern="^[a-zA-Z]*" maxlength="30" required>
+            <!-- <label for="lastname">Apellido:</label> -->
+            <input type="text" name="lastname" id="lastname" pattern="^[a-zA-Z]*" maxlength="30" required placeholder="Apellidos:">
             <br>
-            <label for="email">Correo electrónico:</label>
-            <input type="email" name="email" id="email" required>
+            <!-- <label for="email">Correo electrónico:</label> -->
+            <input type="email" name="email" id="email" required placeholder="Correo: ">
             <br>
-            <label for="date">fecha de nacimiento:</label>
+            <!-- <label for="date">fecha de nacimiento:</label> -->
             <input type="date" name="date" id="date" required>
             <br>
-            <label for="password">Contraseña:</label>
-            <input type="password" name="password" id="password" minlength="5" required>
+            <!-- <label for="password">Contraseña:</label> -->
+            <input type="password" name="password" id="password" minlength="5" required placeholder="Contraseña:">
             <br>
-            <label for="cpassword">Confirmar contraseña:</label>
-            <input type="password" name="cpassword" id="cpassword" minlength="5" required>
+            <!-- <label for="cpassword">Confirmar contraseña:</label> -->
+            <input type="password" name="cpassword" id="cpassword" minlength="5" required placeholder="Confirmar contraseña:">
             <br>
             <div>
                 <input type="submit" name="registro" value="Registrarse">

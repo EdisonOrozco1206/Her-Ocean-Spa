@@ -113,8 +113,10 @@ header:hover .destellos{
 
     .sede{
         width: 28%;
-        background-color: white;
+        background-color: #fbd5e5;
         padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
 
         h2{
             font-size: 30px;
@@ -157,17 +159,47 @@ header:hover .destellos{
     padding: 10px;
     width: 80%;
     margin: 0 auto;
-    background-color: white;
     display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 10px;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
 
-    div{
-        padding: 10px;
-        box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.75);
+    .opinion-container{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        background-color: #fad4e3;
+        padding: 30px 20px;
+        border-radius: 20px;
+        min-height: 200px;
+        transition: all 500ms;
+        cursor: pointer;
+
+        &:hover{
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+        }
+
+        .title{
+            display: flex;
+            justify-content: space-between;
+        }
         
         h2{
             text-transform: uppercase;
+            margin-bottom: 0px;
+        }
+        .mensaje{
+            text-align: center;
+        }
+        .opinion-correo{
+            text-align: center;
+            margin-top: 10px;
+        }
+        .fecha{
+            color: gray;
+        }
+        .estrellas{
+            text-align: center;
+            margin-top: 10px;
         }
         .borrar-servicio-button{
             display: block;
@@ -232,5 +264,42 @@ footer{
                 transform: translate(-50%, -50%);
             }
         }
+    }
+}
+.swal2-popup{
+    width: 100vw;
+
+    form{
+        display: flex;
+
+        svg{
+            transform: scale(0.5);
+        }
+    }
+
+    input[type="text"]{
+        width: 90%;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    svg{
+        transform: scale(0.5);
+    }
+
+    .swal2-title{
+        strong{
+            font-family: kage;
+            font-size: 40px;
+        }
+    }
+
+    button:nth-child(2), button:last-child{
+        padding: 0px 40px;
+    }
+}
+.sedes{
+    iframe{
+        margin-top: 20px;
     }
 }

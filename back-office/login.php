@@ -12,10 +12,13 @@ if (isset($_POST) && !empty($_POST)) {
     }
 
     if ($data) {
+        session_start();
+        $_SESSION['user'] = $data;
+        session_abort();
         if ($data[0]['perfil'] == "0") {
-            header("location: ../back-office/admin/index.php");
+            header("location: admin/index.php");
         } else {
-            header("location: ../back-office/client/index.php");
+            header("location: client/index.php");
         }
     } else {
         $mensaje_error = "<span style='color:red;'>USUARIO Y CLAVE INCORRECTOS</span>";

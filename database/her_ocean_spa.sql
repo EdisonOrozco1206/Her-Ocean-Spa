@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `correo` varchar(100) NOT NULL,
   `clave` varchar(100) NOT NULL,
   `f_nacimiento` date NOT NULL,
-  `perfil` varchar(100) NOT NULL,
+  `perfil` varchar(100) NOT NULL DEFAULT "1",
   `foto` TEXT NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
