@@ -12,7 +12,7 @@ body {
 }
 
 h1 {
-  font-family: "Bebas Neue", sans-serif;
+  font-family: kage;
   color: #383839;
 }
 
@@ -36,12 +36,13 @@ a {
   background-color: #fdeaf2;
   padding: 15px;
   box-sizing: border-box;
+  transform: translateY(20vh);
 
   h1 {
     text-align: center;
     font-size: 60px;
     color: #333333;
-    font-family: "Bebas Neue", sans-serif;
+    font-family: Kage, sans-serif;
     margin: 15px 0;
     line-height: 1;
   }
@@ -52,13 +53,21 @@ a {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-    background-color: #fff;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    /* background-color: #fff; */
+    /* box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); */
     border-radius: 10px;
     width: 70%;
     max-width: 500px;
     padding: 30px;
-    margin: 30px 0
+    margin: 30px 0;
+
+    div{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+    }
   }
 
   label {
@@ -76,47 +85,48 @@ a {
     border-radius: 5px 5px;
     padding: 15px 10px;
     border: none;
-    background-color: #EADDE3;
+    background-color: white;
   }
 
   input[type="submit"],
-  .btnFill {
-    width: auto;
-    display: inline-block;
-    background-color: #F2B3D1;
+  .btnFill, button {
+    display: block;
+    width: 100%;
+    background-color: transparent;
     cursor: pointer;
-    font-size: 20px;
-    color: #fff;
+    font-size: 18px;
+    color: black;
     font-weight: bold;
-    border: none;
-    margin: 15px 15px;
-    padding: 15px 15px;
+    border: 1px solid black;
+    padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-    transition: all 0.2s ease;
+    transition: all 0.5s;
 
     &:hover {
-      background-color: #AE687A;
+      background-color: black;
+      color: white;
     }
   }
 
   .btn {
-    display: inline-block;
-    border: 2px solid #F2B3D1;
+    display: block;
+    width: 92%;
+    border: 1px solid black;
     cursor: pointer;
-    font-size: 20px;
-    color: #F2B3D1;
+    font-size: 17px;
+    color: black;
     font-weight: bold;
     text-decoration: none;
     border-radius: 5px;
-    margin: 15px 15px;
-    padding: 15px 15px;
+    padding: 10px 20px;
     text-align: center;
-    transition: all 0.2s ease;
+    transition: all 0.5s;
+    background-color: transparent;
 
     &:hover {
-      border: 2px solid #AE687A;
-      color: #AE687A;
+      color: white;
+      background-color: black;
     }
   }
 
