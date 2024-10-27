@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `servicios` (
   `nombre` varchar(100) NOT NULL,
   `descripcion` text NOT NULL,
   `precio` float NOT NULL,
-  `imagen` TEXT NOT NULL
+  `imagen` TEXT
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
