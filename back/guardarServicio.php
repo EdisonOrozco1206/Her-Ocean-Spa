@@ -8,7 +8,7 @@
 
 
         if($titulo != '' && $precio != '' && $descripcion != ''){
-            $sql = "INSERT INTO servicios VALUES(NULL, '$titulo', '$descripcion', $precio, NULL);";
+            $sql = "INSERT INTO servicios (nombre, descripcion, precio) VALUES('$titulo', '$descripcion', $precio);";
             
             if(mysqli_query($connect, $sql)){
                 header("Location: ../servicios.php");
