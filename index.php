@@ -18,9 +18,11 @@
         </div>
 
         <div class="texto">
-            <p>En Her Ocean Spa te invitamos a descubrir un lugar donde cada detalle está pensado para brindarte momentos de auténtica relajación. Desde masajes relajantes hasta faciales cuidadosamente diseñados, ofrecemos una experiencia que te permitirá desconectar del estrés diario.
-            Aquí, el ambiente marino se refleja en cada rincón: suaves sonidos de agua, fragancias frescas y una atmósfera serena que te envuelve desde el primer momento. Nuestros especialistas te acompañarán en un recorrido de bienestar, adaptando cada tratamiento a lo que realmente necesitas.
-            Ven a Her Ocean Spa, un espacio donde el cuidado personal se convierte en una experiencia verdaderamente única</p>
+            <p>En Her Ocean Spa, cada visita es una oportunidad para desconectar y reconectar contigo misma. Desde el momento en que cruzas nuestras puertas, serás recibida por un ambiente que evoca la tranquilidad del mar, con detalles cuidadosamente diseñados para transportarte lejos del estrés cotidiano.
+
+            Nuestros tratamientos van más allá de lo superficial. Cada masaje, baño terapéutico o tratamiento corporal ha sido seleccionado con esmero para aliviar tensiones, mejorar la circulación y devolverle al cuerpo la sensación de ligereza que merece. Las manos expertas de nuestros terapeutas se combinan con ingredientes naturales que nutren la piel y los sentidos, logrando una experiencia que realmente se siente.
+
+            En Her Ocean Spa, creemos que la verdadera belleza y bienestar comienzan desde adentro. Por eso, ofrecemos espacios de calma donde puedes descansar, respirar profundo y dejarte llevar por el entorno. Desde el suave sonido del agua hasta la iluminación tenue que invita a la relajación, hemos pensado en cada detalle para que encuentres el equilibrio entre cuerpo y mente.</p>
         </div>
         
         <div class="arco">
@@ -31,30 +33,30 @@
         <div class="container">
             <img src="img/img3.jpg" alt="">
             <div class="content">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, dolorum!</p>
+                <p>En Her Ocean Spa, cada visita es una invitación a desconectar y reconectar contigo misma. Al cruzar nuestras puertas, te encontrarás rodeada de un ambiente que evoca la serenidad del mar, diseñado para que dejes atrás el estrés diario y te sumerjas en un momento de paz.</p>
             </div>
         </div>
         <div class="container">
             <img src="img/img2.jpg" alt="">
             <div class="content">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, dolorum!</p>
+                <p>Nuestros tratamientos van desde masajes hasta baños terapéuticos, cada uno pensado para aliviar tensiones y mejorar la circulación. Con ingredientes naturales y las manos expertas de nuestros terapeutas, tu cuerpo y sentidos se sienten cuidados y renovados.</p>
             </div>
         </div>
         <div class="container">
             <img src="img/img4.jpg" alt="">
             <div class="content">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, dolorum!</p>
+                <p>La experiencia en Her Ocean Spa va más allá de un simple tratamiento: aquí, cada detalle cuenta. Desde el suave sonido del agua hasta la luz tenue que invita a relajarse, cada elemento está pensado para que disfrutes plenamente de un ambiente de calma.</p>
             </div>
         </div>
         <div class="container">
             <img src="img/img5.jpg" alt="">
             <div class="content">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, dolorum!</p>
+                <p>Ven a Her Ocean Spa y permite que el equilibrio entre cuerpo y mente se convierta en tu nueva realidad. Saldrás sintiéndote más ligera y lista para enfrentar el mundo desde una perspectiva renovada.</p>
             </div>
         </div>
     </div>
     <div class="row_3">
-        <h2>Nuestro trabajo</h2>
+        <h2 style="font-size: 80px;">Nuestro trabajo</h2>
         <div class="card-container">
             <div class="row">
                 <div class="card">

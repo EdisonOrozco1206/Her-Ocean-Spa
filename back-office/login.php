@@ -18,7 +18,7 @@ if (isset($_POST) && !empty($_POST)) {
             header("location: ../back-office/admin/index.php");
         } else {
             $_SESSION['user'] = $data[0];
-            header("location: ../back-office/client/index.php");
+            header("location: ../back-office/index.php");
         }
     } else {
         $mensaje_error = "<span style='color:red;'>USUARIO Y CLAVE INCORRECTOS</span>";

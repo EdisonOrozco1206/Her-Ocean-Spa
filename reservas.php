@@ -1,4 +1,5 @@
 <?php 
+    ob_start();
     include('layouts/header.php');
     include("database/bd.php");
     $servicios = mysqli_query($connect, "SELECT * FROM servicios ORDER BY id desc");
@@ -6,21 +7,23 @@
     if(isset($_POST) && !empty($_POST)){
         $fecha = isset($_POST['fecha']) && !empty($_POST['fecha']) ? $_POST['fecha'] : '';
         $hora = isset($_POST['hora']) && !empty($_POST['hora']) ? $_POST['hora'] : '';
+        $cantidad = isset($_POST['cantidad']) && !empty($_POST['cantidad']) ? $_POST['cantidad'] : '';
         $servicio = isset($_POST['servicio']) && !empty($_POST['servicio']) ? $_POST['servicio'] : '';
         $mPago = isset($_POST['mPago']) && !empty($_POST['mPago']) ? $_POST['mPago'] : '';
         $sede = isset($_POST['sede']) && !empty($_POST['sede']) ? $_POST['sede'] : '';
 
-        if($fecha && $hora && $servicio && $mPago && $sede){
+        if($fecha && $hora && $servicio && $mPago && $sede && $cantidad){
             $fecha_hora = $fecha." ".$hora;
             $servicioDatabase = mysqli_query($connect, "SELECT * FROM servicios WHERE id = $servicio");
             $servicioDatabase = $servicioDatabase->fetch_assoc();
             $precio = $servicioDatabase['precio'];
             $uId = $_SESSION['user']['id'];
-            $sql = "INSERT INTO reservas VALUES(NULL, '$fecha_hora', $precio, 'reservado', '$mPago', '$sede', $uId, $servicio);";
+            $sql = "INSERT INTO reservas VALUES(NULL, '$fecha_hora', $cantidad, $precio, '$mPago', 'reservado', '$sede', $uId, $servicio);";
 
-            $reserva = mysqli_query($connect, $sql);
-            if($reserva){
-                header("Location: index.php");
+            if(mysqli_query($connect, $sql)){
+                header("Location: reservaInfo.php?type=0");
+            }else{
+                header("Location: reservaInfo.php?type=1");
             }
         }
     }
@@ -46,6 +49,18 @@
             <div>
                 <label for="hora">Hora de inicio</label>
                 <input type="time" name="hora" required>
+            </div>
+
+            <div>
+                <label for="cantidad">Cantidad de personas</label>
+                <select name="cantidad">
+                    <option value="">Selecciona la opcion</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
             </div>
 
             <div>
@@ -91,3 +106,4 @@
 </div>
 
 <?php include('layouts/footer.php') ?>
+<?php ob_end_flush(); ?>

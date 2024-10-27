@@ -29,13 +29,13 @@ if (isset($_POST['registro'])) {
 ?>
 <?php include('../layouts/header.php') ?>
 <link rel="stylesheet" href="<?= SCRIPT_ROOT ?>back-office/styles-bo.css">
-<div class="container_bo">
+<div class="container_bo agregar-servicio">
     <form action="" method="post">
         <?php
         if ($mensajeRegistro == "") {
         ?>
             <h1>Regístrese</h1>
-            <!-- <label for="name">Nombre:</label> -->
+            <!-- <label for="name">Nombre:</label> -->  
             <input type="text" name="name" id="name" maxlength="30" pattern="^[a-zA-Z]*" required placeholder="Nombre:">
             <br>
             <!-- <label for="lastname">Apellido:</label> -->

@@ -12,7 +12,7 @@
 
         <div>
             <label for="descripcion">Descripcion</label>
-            <input type="text" name="descripcion" required>
+            <textarea name="descripcion" id="" style="max-width: 98%; min-width: 98%;">Ingresa la descripcion</textarea>
         </div>
 
         <div>

@@ -77,6 +77,7 @@ CREATE TABLE IF NOT EXISTS `opiniones` (
 CREATE TABLE IF NOT EXISTS `reservas` (
   `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `fecha_hora` datetime NOT NULL,
+  `cantidad`, int(10) NOT NULL,
   `precio_total` float NOT NULL,
   `m_pago` varchar(255) DEFAULT NULL,
   `estado` varchar(255) NOT NULL,
@@ -135,6 +136,12 @@ CREATE TABLE `usuarios` (
   `perfil` varchar(100) NOT NULL,
   `foto` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+CREATE TABLE suscripciones(
+  id int not null primary key AUTO_INCREMENT,
+  email varchar(255)
+)ENGINE=INNODB;
 
 --
 -- Volcado de datos para la tabla `usuarios`
