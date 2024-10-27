@@ -1,6 +1,6 @@
 <?php include('layouts/header.php') ?>
 
-<div class="politicas-container">
+<div class="politicas-container" style="transform: translateY(15vw);">
     <strong>Política de Privacidad de Her Ocean Spa</strong>
     <span>En Her Ocean Spa, nos dedicamos a brindar una experiencia excepcional a nuestras clientas, y la protección de su privacidad es una prioridad. Esta política de privacidad describe cómo recopilamos, utilizamos, compartimos y protegemos la información personal que usted nos proporciona a través de nuestro sitio web y servicios.</span>
 

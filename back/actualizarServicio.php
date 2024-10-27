@@ -80,7 +80,7 @@
         <input type="text" name="titulo" value="<?= $service['nombre'] ?>">
 
         <label for="descripcion">descripcion</label>
-        <input type="text"name="descripcion" value="<?= $service['descripcion'] ?>">
+        <textarea name="descripcion" style="max-width: 98%; min-width: 98%;"><?= $service['descripcion'] ?></textarea>
 
         <label for="precio">precio</label>
         <input type="number"name="precio" value="<?= $service['precio'] ?>">

@@ -13,6 +13,7 @@
                     <th>Cliente</th>
                     <th>Servicio</th>
                     <th>Sede</th>
+                    <th>Cantidad personas</th>
                     <th>Metodo de pago</th>
                     <th>Estado</th>
                     <th>Fecha hora</th>
@@ -40,6 +41,7 @@
                             <?php endforeach; ?>
                         </td>
                         <td><?= $r['sede'] ?></td>
+                        <td><?= $r['cantidad'] ?></td>
                         <td>
                             <?php if($r['m_pago'] == "T"): ?>
                                 <p>Transferencia</p>
@@ -51,7 +53,7 @@
                         </td>
                         <td><?= $r['estado'] ?></td>
                         <td><?= $r['fecha_hora'] ?></td>
-                        <td>$ <?= $r['precio_total'] ?></td>
+                        <td>$ <?= $r['precio_total']*$r['cantidad'] ?></td>
                         <td><a href="back/editarReserva.php?id=<?= $r['id'] ?>" style="color: blue;">Editar</a></td>
                         <td><a href="back/eliminarReserva.php?id=<?= $r['id'] ?>" style="color: red;">Eliminar</a></td>
                     </tr>

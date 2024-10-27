@@ -1,13 +1,13 @@
 <?php include('../layouts/header.php') ?>
 <link rel="stylesheet" href="<?= SCRIPT_ROOT ?>back-office/styles-bo.css">
-<div class="container_bo">
+<div class="container_bo agregar-servicio">
     <form action="./login.php" method="post">
         <h1>Inicia sesion</h1>
-        <!-- <label for="email">Correo electrónico:</label> -->
-        <input type="email" name="email" id="email" autocomplete="off" required placeholder="Correo: ">
+        <label for="email">Correo electrónico:</label>
+        <input type="email" name="email" id="email" autocomplete="off" required placeholder="...">
         <br>
-        <!-- <label for="password">Contraseña:</label> -->
-        <input type="password" name="password" id="password" required placeholder="Contraseña: ">
+        <label for="password">Contraseña:</label>
+        <input type="password" name="password" id="password" required placeholder="...">
         <br>
         <div>
             <button type="submit">Iniciar sesión</button>

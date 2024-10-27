@@ -16,7 +16,7 @@ session_start();
 <body>
     <header id="header">
         <div class="fila">
-            <p>centro de relajación</p>
+            <p>Spa femenino</p>
         </div>
         <div class="fila">
             <div>
@@ -26,7 +26,7 @@ session_start();
                 </a>
             </div>
             <div>
-                <a class="nav-action dnone" href=""><img src="<?=SCRIPT_ROOT ?>img/suit-heart.svg" alt=""></a>
+                <a class="nav-action dnone" href="<?=SCRIPT_ROOT ?>favoritos.php"><img src="<?=SCRIPT_ROOT ?>img/suit-heart.svg" alt=""></a>
                 <?php if(isset($_SESSION['user']) && !empty($_SESSION['user'])): ?>
                     <a class="nav-action dnone" href="<?=SCRIPT_ROOT ?>perfil.php"><img src="<?=SCRIPT_ROOT ?>img/person.svg" alt=" "></a>
                 <?php else: ?>
@@ -38,15 +38,17 @@ session_start();
         <div class="fila">  
             <nav>
                 <ul>
+                    <?php if(isset($_SESSION['user']) && !empty($_SESSION['user']) && $_SESSION['user']['perfil'] == 2): ?>
+                        <li><a class="header-link" href="<?=SCRIPT_ROOT ?>back-office/admin/index.php">Admin</a></li>
+                    <?php endif; ?>
                     <li><a class="header-link" href="<?=SCRIPT_ROOT ?>nosotros.php">Nosotros</a></li>
                     <li class="li-destellos">
-                        <img class="destellos" src="http://localhost/Proyecto/img/destellos.png" alt="">
+                        <img class="destellos" src="http://localhost/Proyecto/img/brillos-removed.png" alt="">
                         <a class="header-link servicios-link" href="<?=SCRIPT_ROOT ?>servicios.php">Servicios</a>
-                        <img class="destellos" src="http://localhost/Proyecto/img/destellos.png" alt="">
+                        <img class="destellos" src="http://localhost/Proyecto/img/brillos-removed.png" alt="">
                     </li>
                     <li><a class="header-link" href="<?=SCRIPT_ROOT ?>reservas.php">Reservas</a></li>
                     <li><a class="header-link" href="<?=SCRIPT_ROOT ?>opiniones.php">Opiniones</a></li>
-                    <li><a class="header-link" href="<?=SCRIPT_ROOT ?>belleza.php">Recomendaciones</a></li>
                     <li><a class="header-link" href="<?=SCRIPT_ROOT ?>sedes.php">Sedes</a></li>
                 </ul>
             </nav>
@@ -115,20 +117,6 @@ session_start();
                 const links = document.querySelectorAll(".header-link");
                 const footer = document.getElementById("footer");
                 const destellos = document.querySelectorAll(".destellos");
-                const navActions = document.querySelectorAll(".nav-action");
-                header.addEventListener('mouseover', function() {
-                    navActions.forEach(element => {
-                        element.classList.remove("dnone");
-                        element.classList.add("dblock");
-                    });
-                });
-                header.addEventListener('mouseout', function() {
-                    navActions.forEach(element => {
-                        element.classList.add("dnone");
-                        element.classList.remove("dblock");
-                    });
-                });
-
 
                 destellos.forEach(element => {
                     element.classList.add("dnone");
@@ -141,10 +129,6 @@ session_start();
                 links.forEach(element => {
                     element.classList.add("textwhite");
                 });
-                navActions.forEach(element => {
-                        element.classList.add("dnone");
-                        element.classList.remove("dblock");
-                    });
                 footer.style.transform = "translateY(0vh)";
             });
 
@@ -152,7 +136,6 @@ session_start();
                 const header = document.getElementById("header");
                 const text = document.querySelectorAll(".title");
                 const links = document.querySelectorAll(".header-link");
-                const navActions = document.querySelectorAll(".nav-action");
                 const destellos = document.querySelectorAll(".destellos");
 
                 if(window.scrollY >= 544){
@@ -169,13 +152,6 @@ session_start();
                     destellos.forEach(element => {
                         element.classList.remove("dnone");
                     });
-
-                    if(header.classList.contains("addbgwhite")){
-                        navActions.forEach(element => {
-                            element.classList.remove("dnone");
-                            element.classList.add("dblock");
-                        });
-                    }
                 }
                 if(window.scrollY < 544){
                     header.classList.remove("addbgwhite");
@@ -187,10 +163,6 @@ session_start();
                     links.forEach(element => {
                         element.classList.add("textwhite");
                         element.classList.remove("blackText");
-                    });
-                    navActions.forEach(element => {
-                        element.classList.add("dnone");
-                        element.classList.remove("dblock");
                     });
                     destellos.forEach(element => {
                         element.classList.add("dnone");
