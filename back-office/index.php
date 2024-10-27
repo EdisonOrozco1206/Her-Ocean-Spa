@@ -10,8 +10,8 @@
         <input type="password" name="password" id="password" required placeholder="...">
         <br>
         <div>
-            <button type="submit">Iniciar sesión</button>
             <a class="btn" href="./registro.php">Registrese</a>
+            <button type="submit">Iniciar sesión</button>
         </div>
     </form>
 </div>
