@@ -52,9 +52,7 @@ CREATE TABLE IF NOT EXISTS `opiniones` (
   `comentario` text NOT NULL,
   `calificacion` int(1) DEFAULT NULL,
   `id_cliente` int(11) NOT NULL,
-  `id_servicio` int(11) NOT NULL,
-  CONSTRAINT `opiniones_ibfk_1` FOREIGN KEY (`id_cliente`) REFERENCES `usuarios` (`id`),
-  CONSTRAINT `opiniones_ibfk_2` FOREIGN KEY (`id_servicio`) REFERENCES `servicios` (`id`)
+  CONSTRAINT `opiniones_ibfk_1` FOREIGN KEY (`id_cliente`) REFERENCES `usuarios` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -107,7 +105,6 @@ INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `correo`, `clave`, `f_nacimi
 -- Índices de la tabla `opiniones`
 ALTER TABLE `opiniones`
   ADD KEY `id_cliente` (`id_cliente`),
-  ADD KEY `id_servicio` (`id_servicio`);
 
 -- Índices de la tabla `sedes`
 ALTER TABLE `sedes`
